@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rithyreach Portfolio</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-        body {
+        body{
             background: url('img/photo_2024-02-20_19-31-56.jpg') no-repeat center center fixed;
             background-size: cover;
-        }
-
-        #mainh {
-            color: white;
-        }
-
-        body {
             margin: 0;
             padding: 0;
         }
-
-        #container {
+        #mainh{
+            color: white;
+        }
+        #container{
             display: flex;
             justify-content: center;
         }
-
-        #navbar {
+        #navbar{
             overflow: hidden;
         }
-
-        #navbar a {
+        #navbar a{
             float: left;
             display: block;
             color: #f2f2f2;
@@ -39,7 +31,6 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
-
         #navbar a:hover {
             background-color: #ddd;
             color: black;
@@ -47,20 +38,44 @@
         #container1{
             text-align: center;
         }
+        #container #navbar{
+            overflow: hidden;
+            float: left;
+        }
+        #navbar a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        #aboutme{
+            display: none;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
     </style>
 </head>
-
 <body>
     <header>
         <div id="container">
             <div id="navbar">
                 <a href="#">HOME</a>
-                <a href="#">ABOUT</a>
+                <a id="about" href="#">ABOUT</a>
                 <a href="#">RESUME</a>
                 <a href="#">WORKS</a>
                 <a href="#">TESTIMONIALS</a>
                 <a href="#">CONTACT</a>
             </div>
+        </div>
+        <div id="aboutme">
+            <h2>About Me</h2>
+            <p>Hello my name is <b>RIN RITHYREACH</b> I'm a Web Developer, Graphic Designer and Video Editor. In web development i know basic fundamantal of frontend like HTML CSS and JavaScript, Backend i also know PHP programming language and laravel framework and database MYSQL. In Graphic Design i can use Adobe Photoshop and Adobe llustrator, In Video Editor i can use Adobe Premiere Pro and Adobe After Effect.</p>
         </div>
         <div id="container1">
         <h1 id="mainh">I'm Rin Rithyreach</h1>
@@ -69,10 +84,15 @@
     </header>
     <script>
         $(document).ready(function () {
+            $("#about").hover(
+                function(){
+                    $("#aboutme").stop().slideDown();
+                },
+                function(){
+                    $("#aboutme").stop().slideUp();
+                }
+            );
         });
-
     </script>
-
 </body>
-
 </html>
