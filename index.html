@@ -13,6 +13,8 @@
             background-size: cover;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
         }
         #title{
             color: white;
@@ -26,12 +28,6 @@
             overflow: hidden;
             background-color: #f0f0f0;
             padding: 20px;
-        }
-        #container2{
-            text-align: center;
-        }
-        #container2 img{
-            padding: 10px;
         }
         .navbar{
             background-color: transparent !important;
@@ -52,6 +48,30 @@
             color: black;
             border-radius: 6px;
             transition: 0.3s;
+        }
+        #container2{
+            text-align: center;
+        }
+        #container2 img{
+            width: 30px;
+            padding: 5px;
+        }
+        #container3 #download{
+            padding: 5px;
+            border-radius: 10px;
+            background-color: black;
+            color: brown;
+        }
+        #container3 #download:hover{
+            background-color: #059862;
+            color: white;
+            transition: 0.6s;
+            padding: 20px;
+            font-size: 20px;
+        }
+        #container3{
+            text-align: center;
+            padding-top: 10px;
         }
     </style>
 </head>
@@ -89,23 +109,28 @@
           </nav>
         <div id="aboutme">
             <h2>About Me</h2>
-            <p>Hello my name is <b>RIN RITHYREACH</b> I'm a Web Developer, Graphic Designer and Video Editor. In web development i know basic fundamantal of frontend like HTML CSS and JavaScript, Backend i also know PHP programming language and laravel framework and database MYSQL. In Graphic Design i can use Adobe Photoshop and Adobe llustrator, In Video Editor i can use Adobe Premiere Pro and Adobe After Effect.</p>
+            <p>Hello my name is <b>RIN RITHYREACH</b> I'm a <b>Web Developer</b>, <b>Graphic Designer</b> and <b>Video Editor</b>. <b>In Web Development</b> i can build a <b>E-Commerce and Business Growth website</b>, <b>Education and E-Learning website</b>. <b>In Graphic Design</b> i can create build and edit <b>Poster</b>, <b>Logo</b> and another. In <b>Video Editor</b> i can make create and edit all type of <b>Video Production</b>.</p>
         </div>
         <div id="container1">
         <h1 id="title">I'm Rin Rithyreach</h1>
-        <p id="title">I'm a Web Developer, Video Editor and Graphic Design.</p>
+        <p id="title">I'm a <b>Web Developer</b>, <b>Video Editor</b> and <b>Graphic Design</b>. I am Freelance looking for who need <br>to build a <b>Static Websites</b> and <b>Dynamic Websites</b>, I can help you with that.</p>
     </div>
     </header>
     <main>
         <div id="container2">
-            <img width="20px" src="logo/fb.png" alt="fb">
-            <img width="20px" src="logo/google.png" alt="google">
-            <img width="20px" src="logo/ig.png" alt="ig">
-            <img width="20px" src="logo/linkin.png" alt="linkin">
-            <img width="20px" src="logo/skype.png" alt="skype">
-            <img width="20px" src="logo/twitter.png" alt="twitter">
+            <img src="logo/fb.png" alt="fb">
+            <img src="logo/google.png" alt="google">
+            <img src="logo/ig.png" alt="ig">
+            <img src="logo/linkin.png" alt="linkin">
+            <img src="logo/skype.png" alt="skype">
+            <img src="logo/twitter.png" alt="twitter">
         </div>
     </main>
+    <footer>
+        <div id="container3">
+            <button id="download">Download</button>
+        </div>
+    </footer>
     <script>
         $(document).ready(function () {
             $("#about").hover(
@@ -117,6 +142,19 @@
                 }
             );
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var cvFilePath = '';
+        $('#download').on('click', function(){
+            var downloadLink = document.createElement('a');
+            downloadLink.href = cvFilePath;
+            downloadLink.download = '';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+      });
+    });
     </script>
 </body>
 </html>
