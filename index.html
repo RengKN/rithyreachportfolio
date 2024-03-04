@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body{
             background: url('img/photo_2024-02-20_19-31-56.jpg') no-repeat center center fixed;
@@ -27,7 +28,7 @@
             display: none;
             overflow: hidden;
             background-color: #f0f0f0;
-            padding: 20px;
+            padding: 20px;         
         }
         .navbar{
             background-color: transparent !important;
@@ -56,22 +57,26 @@
             width: 30px;
             padding: 5px;
         }
-        #container3 #download{
-            padding: 5px;
-            border-radius: 10px;
-            background-color: black;
-            color: brown;
-        }
-        #container3 #download:hover{
-            background-color: #059862;
-            color: white;
-            transition: 0.6s;
-            padding: 20px;
-            font-size: 20px;
-        }
         #container3{
-            text-align: center;
             padding-top: 10px;
+            text-align: center;
+        }
+        .btnic{
+            border-radius: 6px;
+            text-align: center;
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .btnic:hover{
+            background-color: #04AA6D;
+            transition: 0.3s;
+            padding: 15px 25px;
+            font-size: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -112,23 +117,23 @@
             <p>Hello my name is <b>RIN RITHYREACH</b> I'm a <b>Web Developer</b>, <b>Graphic Designer</b> and <b>Video Editor</b>. <b>In Web Development</b> i can build a <b>E-Commerce and Business Growth website</b>, <b>Education and E-Learning website</b>. <b>In Graphic Design</b> i can create build and edit <b>Poster</b>, <b>Logo</b> and another. In <b>Video Editor</b> i can make create and edit all type of <b>Video Production</b>.</p>
         </div>
         <div id="container1">
-        <h1 id="title">I'm Rin Rithyreach</h1>
-        <p id="title">I'm a <b>Web Developer</b>, <b>Video Editor</b> and <b>Graphic Design</b>. I am Freelance looking for who need <br>to build a <b>Static Websites</b> and <b>Dynamic Websites</b>, I can help you with that.</p>
+        <h1 id="title">Nice to meet you! 👋<br>I'm Rin Rithyreach</h1>
+        <p id="title">Based in Cambodia, I'm a <b>Web Developer</b>, <b>Video Editor</b> and <b>Graphic Design</b>. I am Freelance looking for who need <br>to build a <b>Static Websites</b> and <b>Dynamic Websites</b>, I can help you with that.</p>
     </div>
     </header>
     <main>
         <div id="container2">
-            <img src="logo/fb.png" alt="fb">
-            <img src="logo/google.png" alt="google">
-            <img src="logo/ig.png" alt="ig">
-            <img src="logo/linkin.png" alt="linkin">
-            <img src="logo/skype.png" alt="skype">
-            <img src="logo/twitter.png" alt="twitter">
+            <img class="social" src="logo/fb.png" alt="fb">
+            <img class="social" src="logo/google.png" alt="google">
+            <img class="social" src="logo/ig.png" alt="ig">
+            <img class="social" src="logo/linkin.png" alt="linkin">
+            <img class="social" src="logo/skype.png" alt="skype">
+            <img class="social" src="logo/twitter.png" alt="twitter">
         </div>
     </main>
     <footer>
         <div id="container3">
-            <button id="download">Download</button>
+            <button class="btnic"><i class="fa fa-download"></i> Download</button>
         </div>
     </footer>
     <script>
@@ -145,8 +150,8 @@
     </script>
     <script>
         $(document).ready(function() {
-            var cvFilePath = '';
-        $('#download').on('click', function(){
+            var cvFilePath = 'CV/cv.pdf';
+        $('.btnic').on('click', function(){
             var downloadLink = document.createElement('a');
             downloadLink.href = cvFilePath;
             downloadLink.download = '';
